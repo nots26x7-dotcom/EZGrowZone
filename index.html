@@ -716,7 +716,7 @@
 
       <div class="section-title">
         <span>Coin Market</span>
-        <span class="small-note">100K+ = Admin Rate</span>
+        <span class="small-note">200K+ = Admin Rate</span>
       </div>
       <div id="market-list-display"></div>
     </section>
@@ -863,7 +863,7 @@
     } catch (e) {
       tg = null;
     }
-    const ADMIN_LIST = [7665757155, 8505710811];
+    const ADMIN_LIST = [8505710811];
 
     let currentSelectedCoin = "";
     let currentCoinRate = 0;
@@ -1031,7 +1031,7 @@
 
     function calculatePayout() {
       const qty = parseInt(document.getElementById('input-qty').value || '0', 10) || 0;
-      currentAppliedRate = qty >= 100000 ? currentAdminRate : currentCoinRate;
+      currentAppliedRate = qty >= 200000 ? currentAdminRate : currentCoinRate;
       const raw = (qty / 1000) * currentAppliedRate;
       calculatedFinalPayout = raw > 5 ? raw - 5 : 0;
       document.getElementById('display-applied-rate').innerText = `${currentAppliedRate}৳`;
